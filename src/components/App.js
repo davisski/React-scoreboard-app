@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Header from "./modules/Header";
 import Player from "./modules/Player";
-
+import AddPlayerForm from "./modules/AddPlayerForm";
 
 
 class App extends Component {
@@ -41,6 +41,18 @@ class App extends Component {
       };
     });
   }
+  handleAddPlayer = (name) => {
+    this.setState({
+      players: [
+        ...this.state.players,
+        {
+          name,
+          score: 0,
+          id: this.state.players.length + 1
+        }
+      ]
+    })
+  }
   render() {
     return (
       <div className="scoreboard">
@@ -61,6 +73,7 @@ class App extends Component {
             score={player.score}           
           />
         )}
+        <AddPlayerForm addPlayer={this.handleAddPlayer} />
       </div>
     );
   }
