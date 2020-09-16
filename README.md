@@ -1,8 +1,8 @@
 # React Scoreboard application
 Scoreboard application with basic functionality.
 # Table of contents
-* [General-info](#general-info)
-* [App-features](#app-features)
+* [General info](#general-info)
+* [App features](#app-features)
 * [Tehnologies](#tehnologies)
 * [Setup](#setup)
 
