@@ -28,3 +28,4 @@ $ npm install
 $ npm start
 
 ```
+Then open app on http://localhost:3000
