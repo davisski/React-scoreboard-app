@@ -1,31 +1,38 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Header from "./modules/Header";
 import Player from "./modules/Player";
 
 
 
-class App extends React.Component {
+class App extends Component {
   state = {
+    score: 0,
     players: [
       {
         name: "Guil",
-        id: 1
+        id: 1,
+        score: 0
       },
       {
         name: "Treasure",
-        id: 2
+        id: 2,
+        score: 0
       },
       {
         name: "Ashley",
-        id: 3
+        id: 3,
+        score: 0
       },
       {
         name: "James",
-        id: 4
+        id: 4,
+        score: 0
       }
     ]
   };
-
+  handleScoreChange = (delta) => {
+    console.log(delta)
+  }
   handleRemovePlayer = (id) => {
     this.setState( prevState => {
       return {
@@ -48,7 +55,9 @@ class App extends React.Component {
             name={player.name}
             id={player.id}
             key={player.id.toString()} 
-            removePlayer={this.handleRemovePlayer}           
+            removePlayer={this.handleRemovePlayer}
+            changeScore={this.handleScoreChange}
+            score={player.score}           
           />
         )}
       </div>
