@@ -1,5 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 
+/**
+ * 
+ * @param {index} - Index of player.
+ * @param {score} - Store individual player score.
+ * @method {changeScore} - Call to change score base on action. 
+ */
 const Counter = ({index, score, changeScore}) => {           
     return (
         <div className="counter">
@@ -9,4 +16,11 @@ const Counter = ({index, score, changeScore}) => {
         </div>
     );
 }
+// Typechecking
+Counter.propTypes = {
+    index: PropTypes.number,
+    score: PropTypes.number,
+    changeScore: PropTypes.func
+}
+
 export default Counter;

@@ -16,7 +16,8 @@ The focus of this app is different approaches and best practices to writing comp
 
 # Tehnologies
 * React version: v16.4.2
-* React-dom version: v16.4.2
+* React-DOM version: v16.4.2
+* Prop-Types version: v15.7.2
 
 # Setup
 Copy repository https://github.com/davisski/react-scoreboard-app.git
